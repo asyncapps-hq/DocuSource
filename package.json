@@ -1,0 +1,36 @@
+{
+  "name": "docusource",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Enterprise Knowledge RAG with Direct Citations — grounded answers, exact source highlights",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @docusource/shared && npm run build -w @docusource/chunker && npm run build -w @docusource/retriever && npm run build -w @docusource/web",
+    "test": "npm run build -w @docusource/shared && npm run build -w @docusource/chunker && npm run build -w @docusource/retriever && npm run test -w @docusource/shared && npm run test -w @docusource/chunker && npm run test -w @docusource/retriever && npm run test -w @docusource/web",
+    "dev": "npm run dev -w @docusource/web",
+    "doctor": "node scripts/doctor.mjs",
+    "eval": "node scripts/eval-run.mjs",
+    "test:e2e": "playwright test",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "overrides": {
+    "postcss": "8.5.25",
+    "sharp": "0.35.3"
+  },
+  "author": "KhyFee (https://github.com/KhyFee)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KhyFee/DocuSource.git"
+  },
+  "homepage": "https://github.com/KhyFee/DocuSource#readme"
+}

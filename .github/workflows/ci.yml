@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci || npm install
+      - run: npm test
+      - run: npm run build
+      - run: python services/embedder/app.py
+      - run: pip install -r services/embedder/requirements.txt
+        # heavy; optional for PRs — keep selftest without model
+        continue-on-error: true
+      - name: Install Playwright
+        run: npx playwright install --with-deps chromium
+      - name: E2E
+        run: npx playwright test
+        env:
+          DOCUSOURCE_DEMO: '1'
+      - run: npm audit --omit=dev || true
+
+  embedder-selftest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python services/embedder/app.py

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360" role="img" aria-label="DocuSource architecture">
+  <rect width="920" height="360" fill="#f3efe6"/>
+  <text x="24" y="36" fill="#1a1f16" font-family="Georgia,serif" font-size="20" font-weight="700">DocuSource architecture</text>
+  <rect x="24" y="70" width="150" height="56" rx="12" fill="#fffdf8" stroke="#0f6b4c"/>
+  <text x="99" y="104" text-anchor="middle" fill="#1a1f16" font-family="sans-serif" font-size="14">Upload</text>
+  <rect x="200" y="70" width="150" height="56" rx="12" fill="#fffdf8" stroke="#0f6b4c"/>
+  <text x="275" y="104" text-anchor="middle" fill="#1a1f16" font-family="sans-serif" font-size="14">Chunker</text>
+  <rect x="376" y="70" width="160" height="56" rx="12" fill="#fffdf8" stroke="#c45c26"/>
+  <text x="456" y="104" text-anchor="middle" fill="#1a1f16" font-family="sans-serif" font-size="14">Embedder</text>
+  <rect x="562" y="70" width="150" height="56" rx="12" fill="#fffdf8" stroke="#0f6b4c"/>
+  <text x="637" y="104" text-anchor="middle" fill="#1a1f16" font-family="sans-serif" font-size="14">pgvector</text>
+  <rect x="738" y="70" width="150" height="56" rx="12" fill="#fffdf8" stroke="#0f6b4c"/>
+  <text x="813" y="104" text-anchor="middle" fill="#1a1f16" font-family="sans-serif" font-size="14">Chat</text>
+  <path d="M174 98 H200" stroke="#5c6456" stroke-width="2"/>
+  <path d="M350 98 H376" stroke="#5c6456" stroke-width="2"/>
+  <path d="M536 98 H562" stroke="#5c6456" stroke-width="2"/>
+  <path d="M712 98 H738" stroke="#5c6456" stroke-width="2"/>
+  <rect x="200" y="180" width="180" height="56" rx="12" fill="#fffdf8" stroke="#0f6b4c"/>
+  <text x="290" y="214" text-anchor="middle" fill="#1a1f16" font-family="sans-serif" font-size="14">Hybrid retrieve</text>
+  <rect x="420" y="180" width="180" height="56" rx="12" fill="#fffdf8" stroke="#0f6b4c"/>
+  <text x="510" y="214" text-anchor="middle" fill="#1a1f16" font-family="sans-serif" font-size="14">Grounding</text>
+  <rect x="640" y="180" width="180" height="56" rx="12" fill="#fffdf8" stroke="#c45c26"/>
+  <text x="730" y="214" text-anchor="middle" fill="#1a1f16" font-family="sans-serif" font-size="14">Opt-in LLM</text>
+  <rect x="320" y="280" width="280" height="56" rx="12" fill="#fffdf8" stroke="#0f6b4c"/>
+  <text x="460" y="314" text-anchor="middle" fill="#1a1f16" font-family="sans-serif" font-size="14">Citation highlight UI</text>
+  <path d="M637 126 V180" stroke="#5c6456" stroke-width="2"/>
+  <path d="M510 236 V280" stroke="#5c6456" stroke-width="2"/>
+  <text x="24" y="340" fill="#5c6456" font-family="sans-serif" font-size="12">by KhyFee - answers stay grounded to retrieved text</text>
+</svg>

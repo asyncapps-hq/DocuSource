@@ -1,0 +1,20 @@
+[
+  {
+    "id": "eval-hardware-budget",
+    "question": "What is our remote hardware budget?",
+    "mustCiteContains": ["$1,500"],
+    "mustRefuse": false
+  },
+  {
+    "id": "eval-unknown",
+    "question": "What is the pet insurance reimbursement for turtles?",
+    "mustCiteContains": [],
+    "mustRefuse": true
+  },
+  {
+    "id": "eval-pto-fts",
+    "question": "How many PTO days accrue per month?",
+    "mustCiteContains": ["1.25"],
+    "mustRefuse": false
+  }
+]

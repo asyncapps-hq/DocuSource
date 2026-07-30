@@ -1,0 +1,18 @@
+services:
+  embedder:
+    build: ../services/embedder
+    ports:
+      - "8090:8090"
+  web:
+    image: node:22-bookworm
+    working_dir: /app
+    volumes:
+      - ../:/app
+    command: bash -lc "npm install && npm run build && npm run dev -w @docusource/web -- -H 0.0.0.0 -p 3000"
+    ports:
+      - "3000:3000"
+    environment:
+      DOCUSOURCE_DEMO: "1"
+      EMBEDDER_URL: http://embedder:8090
+    depends_on:
+      - embedder
